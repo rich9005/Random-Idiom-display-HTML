@@ -1,0 +1,180 @@
+<!-- -------- Forwarded message ----------
+From: "Richard Rajah" <rich9005@gmail.com>
+Date: Oct 9, 2014 1:54 AM
+Subject: html
+To: "Richard Rajah" <rich9005@gmail.com>
+Cc: 
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="newstyle.css">
+
+<script type="text/javascript">
+
+function textFileToArray( filename )
+{
+  var reader = (window.XMLHttpRequest !=null)
+        ?new XMLHttpRequest()
+		:new ActiveXObject("Microsoft.XMLHTTP");
+		reader.open("GET",filename,false);
+		reader.send();
+		return reader.responseText.split(/(\r\n|\n)/g);
+}
+
+
+	
+
+var textArray=textFileToArray("Idiomlist.txt") 
+
+function RndTxt()
+{
+ var rannum= Math.floor(Math.random()*textArray.length);
+ 
+ document.getElementById('ShowText').innerHTML=textArray[rannum];
+ }
+
+ onload = function() { RndTxt(); }
+var inter= setInterval(function(){RndTxt();},10000);
+</script>
+
+</head>
+<style>
+.button {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 10px 75px;
+    margin: 0 20px;
+    text-decoration: none;
+}
+.green {
+    border: solid 1px #3b7200;
+    background-color: #88c72a;
+    background: -moz-linear-gradient(top, #88c72a 0%, #709e0e 100%);
+    background: -webkit-linear-gradient(top, #88c72a 0%, #709e0e 100%);
+    background: -o-linear-gradient(top, #88c72a 0%, #709e0e 100%);
+    background: -ms-linear-gradient(top, #88c72a 0% ,#709e0e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#709e0e', endColorstr='#709e0e',GradientType=0 );
+    background: linear-gradient(top, #88c72a 0% ,#709e0e 100%);
+    -webkit-box-shadow: 0px 0px 1px #66FF00, inset 0px 0px 1px #FFFFFF;
+    -moz-box-shadow: 0px 0px 1px #66FF00, inset 0px 0px 1px #FFFFFF;
+    box-shadow: 0px 0px 1px #66FF00, inset 0px 0px 1px #FFFFFF;
+}
+.green:hover {
+    background-color: #7fb52f;
+    background: -moz-linear-gradient(top, #7fb52f 0%, #67910b 100%);
+    background: -webkit-linear-gradient(top, #7fb52f 0%, #67910b 100%);
+    background: -o-linear-gradient(top, #7fb52f 0%, #67910b 100%);
+    background: -ms-linear-gradient(top, #7fb52f 0% ,#67910b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67910b', endColorstr='#67910b',GradientType=0 );
+    background: linear-gradient(top, #7fb52f 0% ,#67910b 100%);
+}
+
+
+.red {
+    border: solid 1px #720000;
+    background-color: #c72a2a;
+    background: -moz-linear-gradient(top, #c72a2a 0%, #9e0e0e 100%);
+    background: -webkit-linear-gradient(top, #c72a2a 0%, #9e0e0e 100%);
+    background: -o-linear-gradient(top, #c72a2a 0%, #9e0e0e 100%);
+    background: -ms-linear-gradient(top, #c72a2a 0% ,#9e0e0e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9e0e0e', endColorstr='#9e0e0e',GradientType=0 );
+    background: linear-gradient(top, #c72a2a 0% ,#9e0e0e 100%);
+    -webkit-box-shadow: 0px 0px 1px #FF3300, inset 0px 0px 1px #FFFFFF;
+    -moz-box-shadow: 0px 0px 1px #FF3300, inset 0px 0px 1px #FFFFFF;
+    box-shadow: 0px 0px 1px #FF3300, inset 0px 0px 1px #FFFFFF;
+}
+
+
+.green:active {
+    background-color: #638f22;
+    background: -moz-linear-gradient(top, #638f22 0%, #486608 100%);
+    background: -webkit-linear-gradient(top, #638f22 0%, #486608 100%);
+    background: -o-linear-gradient(top, #638f22 0%, #486608 100%);
+    background: -ms-linear-gradient(top, #638f22 0% ,#486608 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#486608', endColorstr='#486608',GradientType=0 );
+    background: linear-gradient(top, #638f22 0% ,#486608 100%);
+}
+
+
+.red:hover {
+    background-color: #b52f2f;
+    background: -moz-linear-gradient(top, #b52f2f 0%, #910b0b 100%);
+    background: -webkit-linear-gradient(top, #b52f2f 0%, #910b0b 100%);
+    background: -o-linear-gradient(top, #b52f2f 0%, #910b0b 100%);
+    background: -ms-linear-gradient(top, #b52f2f 0% ,#910b0b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#910b0b', endColorstr='#910b0b',GradientType=0 );
+    background: linear-gradient(top, #b52f2f 0% ,#910b0b 100%);
+}
+
+
+.red:active {
+    background-color: #8f2222;
+    background: -moz-linear-gradient(top, #8f2222 0%, #660808 100%);
+    background: -webkit-linear-gradient(top, #8f2222 0%, #660808 100%);
+    background: -o-linear-gradient(top, #8f2222 0%, #660808 100%);
+    background: -ms-linear-gradient(top, #8f2222 0% ,#660808 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#660808', endColorstr='#660808',GradientType=0 );
+    background: linear-gradient(top, #8f2222 0% ,#660808 100%);
+}
+.rounded {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+.square {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+ 
+.inputs {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #EAEAEA;
+    background: -moz-linear-gradient(top, #FFF, #EAEAEA);
+    background: -webkit-gradient(linear, left top, left bottom, color-top(0.0,#FFF), color-stop(1.0, #EAEAEA));
+    border: 1px solid #CACACA;
+    color: #444;
+    font-size: 1.4em;
+    margin: 0 0 25px;
+    padding: 5px 9px;
+    width: 260px;
+}
+.inputs:focus {
+    background: #FFF;
+    -webkit-box-shadow: 0 0 25px #CCC;    
+    box-shadow: 0 0 25px #CCC;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+}
+footer {
+	background-color:#333;
+	width: 100%;
+	bottom: 0;
+	position: fixed;
+	}
+
+</style>
+<body>
+
+
+<form method="post" action="/cgi-bin/reports/icheck.cgi"><br><br><br><br>
+<center>
+<label class="inputs" > BRANCH/TELLER CODE </label>
+<input type="text" name="brch_num" class="inputs" placeholder="branch/teller code" ><br><br>
+<input type="submit" class="button rounded green" value="Search">
+<input type="reset" class="button rounded red" value="Reset">
+</form><br>
+
+
+</body>
+<footer class="footer">
+<p>
+<div id="ShowText">
+</p></footer>
+</html>
